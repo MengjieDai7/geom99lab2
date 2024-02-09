@@ -30,14 +30,14 @@
     ], function(esriConfig, Map, MapView, Graphic, GraphicsLayer) {
  
         esriConfig.apiKey = "AAPKe88441072ca74ba2981b3af6bcad3ec8ZtQzXSaEim_B5-uGe17w41s8gXW5yZTgpeXiqWWk9MFFvgrRMZYbKvyld4deAEgG";
-      const map = new Map({
+       const map = new Map({
         basemap: "arcgis-topographic" // Basemap layer
       });
  
       const view = new MapView({
         map: map,
         center: [-118.805, 34.027],
-        zoom: 13,
+        zoom: 13, // scale: 72223.819286
         container: "viewDiv",
         constraints: {
           snapToZoom: false
