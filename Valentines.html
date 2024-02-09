@@ -36,6 +36,7 @@
   <script src="https://js.arcgis.com/4.28/"></script>
 
   <script>
+<!-- Add ESRI Map -->
     require([
       "esri/config",
       "esri/views/MapView",
@@ -56,14 +57,18 @@
         zoom: 11,
         container: "viewDiv"
         });
-
-    });
-
-	  let legend = new Legend({
+	    
+<!-- Add Legend   -->
+const basemapGallery = new BasemapGallery({
   view: view
 });
 
-view.ui.add(legend, "bottom-right");
+// Add the widget to the top-right corner of the view
+view.ui.add(basemapGallery, {
+  position: "top-right"
+});
+
+
   </script>
 	<title>The One True Love</title>
 	
