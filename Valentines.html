@@ -57,14 +57,15 @@
         zoom: 11,
         container: "viewDiv"
         });
-     
+
+
 <!-- Add legend -->
-	 const legend = new Legend({
-	        view: view });
+	var legend = new Legend({
+	 view: view });
 	 view.ui.add(Legend, "bottom-left");
 
 <!-- Add Scale Bar -->
-	 const scalebar = new ScaleBar({
+	 var scalebar = new ScaleBar({
 	        view: view });
 	 view.ui.add(scalebar, "bottom-left");
 });
