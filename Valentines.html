@@ -58,18 +58,18 @@
         container: "viewDiv"
         });
      
-     const basemapGallery = new BasemapGallery({
-  view: view,
-  container: document.createElement("div")
-});
 
+//Add Legend 
+	 const legend = new Legend({
+	        view: view });
+	 view.ui.add(Legend, "bottom-left");
 
-view.ui.add(basemapGallery, {
-  position: "top-right"
-});
+//Add Scale Bar 
+	 const scalebar = new ScaleBar({
+	        view: view });
+	 view.ui.add(scalebar, "bottom-left");
+
 	    
-});
-	  
  </script>
 <title>The One True Love</title>
 	
@@ -100,7 +100,7 @@ view.ui.add(basemapGallery, {
 	<h2>This Valentine's Day make sure to show your true love some extra affection, they love you more than you know. </h2>
 	<p> This map displays places to take your pets on this special day! Click to see the name of the Dog Treat shop or name of the Dog Park </p>
 	<div id ="viewDiv"></div>
-	
+	<div id="basemapGalleryDiv"></div>
 	
 	<h2>For those without pets in the Hamilton Area. You can always adopt!</h2>
 	<div class = "elink">
