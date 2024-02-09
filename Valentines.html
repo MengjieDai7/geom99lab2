@@ -5,7 +5,7 @@
 <head>
 	<!-- The CSS -->
 	<style>
-		body {background-color: Seashell; margin-top: 20px;}
+		body {background-color:#F9EBEA; margin-top: 20px;}
 		
 		h1 { letter-spacing: 2px;color: #17575F; font-family: Georgia, serif;
 		margin-left: 15px;}
@@ -17,12 +17,12 @@
 		margin-left: 15px; font-size: 20px;}
 	
 		p{ line-height: 1.5; font-family: Noto Sans, sans-serif;
-		margin-left: 15px;background-color: Seashell;}
+		margin-left: 20px;}
 	
 		.bio{margin-bottom: 50px}
 	
 		.index{text-align:center;}
-		.intro{text-align:center; background-color:#ffeb99; margin:60px; padding:25px; border: 3px solid #17575F;}
+		.intro{text-align:center; background-color:#FFB6C1; margin:60px; padding:25px; border: 3px solid #17575F;}
 	
 		#map {height: 400px; }
 	
@@ -33,70 +33,47 @@
 		.elink{margin-bottom:50px;}
 	</style>
 	
-	<title>Dog Treats</title>
-	<script> 
-	 //adapted from https://developers.google.com/maps/documentation/javascript/examples/advanced-markers-accessibility
-         async function initMap() {
-        // Request needed libraries.
-        const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker",);
-        const map = new Map(document.getElementById("map"), {
-            zoom: 11,
-            center: { lat: 43.712, lng: -79.320 },
-            mapId: "4504f8b37365c3d0",
-        });
-      
-        // receives the initial focus when tab is pressed. Use arrow keys to move between markers; press tab again to cycle through the map controls.
-		 
-        // Locations for PetSmart and PetValu 
-        const PetStops = [
-            {position: { lat: 43.755, lng: -79.356 },title: "Global Pet Foods",},
-            {position: { lat: 43.690, lng: -79.418 },title: "Pet Mama",},
-            {position: { lat: 43.750, lng: -79.286 },title: "Naturaw Canine Food",},
-            {position: { lat: 43.667, lng: -79.442 },title: "Bark & Meow Pet Supplies",},
-            {position: { lat: 43.783, lng: -79.128 },title: "Pet Valu",},
-            {position: { lat: 43.694, lng: -79.308 },title: "Pet Valu",},
-            {position: { lat: 43.679, lng: -79.456 },title: "Pet Smart",},
-            {position: { lat: 43.665, lng: -79.421 },title: "Bark & Meow",},
-            {position: { lat: 43.719, lng: -79.432 },title: "Pet Smart",},
-            {position: { lat: 43.737, lng: -79.533 },title: "Pet Valu",},
-            {position: { lat: 43.681, lng: -79.308 },title: "Paws World",},
-            {position: { lat: 43.709, lng: -79.404 },title: "Global Pet Store",},
-            {position: { lat: 43.643, lng: -79.426 },title: "Fetchy",},
-        ];
-        // Create an info window to share between markers.
-        const infoWindow = new InfoWindow();
-
-     
-       // Create the markers.
-        PetStops.forEach(({ position, title }, i) => {
-            const pin = new PinElement({
-            glyph: `${i + 1}`,
-            });
-            const marker = new AdvancedMarkerElement({
-            position,
-            map,
-            title: `${i + 1}. ${title}`,
-            content: pin.element,
-            });
-
-            // Add a click listener for each marker, and set up the info window.
-            marker.addListener("click", ({ domEvent, latLng }) => {
-            const { target } = domEvent;
-
-            infoWindow.close();
-            infoWindow.setContent(marker.title);
-            infoWindow.open(marker.map, marker);
-            });
-        });
-        }
-
-	</script>	
-
+	<title>The One True Love</title>
+	
 </head>
 	
 <body>
 
+	<!-- Valentines Day for the One True Love  -->
+	
+	<div class = "index">
+	<h1>What is Love?</h1>
+	
+	
+	<div class = "intro">
+	<img id ="img1" src="IMG_0066_resized" alt="Dog Pic" >
+	</div>
+	
+	<div class = "bio">
+	    <h2>Our Message</h2>
+		<h3> There is only one true love in this world .... yes that is right! The love between a dog and its people.  </h3>
+		<p> John Grogan: "A dog has no use for fancy cars, big homes, or designer clothes. A water log stick will do just fine.
+       A dog doesn't care if your rich or poor, clever or dull, smart or dumb. Give him your heart and he'll give you his. 
+       How many people can you say that about? How many people can make you feel rare and pure and special? How many people 
+       can make you feel extraordinary."</p>
+	</div>
+	
+	
+	<h2>This Valentine's Day make sure to show your one true love some extra affection, they love you more than you know. </h2>
+	<div id ="map"></div>
+	
+	
+	<h2>For those without pets in the Hamilton Area. You can always adopt!</h2>
+	<div class = "elink">
+		<a href="https://www.hbspca.com/">Hamilton Burlington SPCA</a>
+	</div>
+	
+	<p> Cheers to all the special paws in our lives. </p>
+	
+	</div>
+
+</body>
+</html>
 	<!-- This is a html website for dogs and the places they love best -->
 	
 	<div class = "index">
