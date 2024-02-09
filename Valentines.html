@@ -32,7 +32,33 @@
 		.elink a{padding-left:20px; padding-right:20px; color:black;}
 		.elink{margin-bottom:50px;}
 	</style>
-	
+<link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
+
+  <script>
+    require([
+      "esri/config",
+      "esri/views/MapView",
+      "esri/WebMap"
+    ], function(esriConfig, MapView, WebMap) {
+
+      esriConfig.apiKey = "AAPKe88441072ca74ba2981b3af6bcad3ec8ZtQzXSaEim_B5-uGe17w41s8gXW5yZTgpeXiqWWk9MFFvgrRMZYbKvyld4deAEgG";
+
+
+      const webmap = new WebMap({
+        portalItem: {
+          id: "eeb3a6337cc74157bccc4ae8ca2df1e2"
+        }
+      });
+      const view = new MapView({
+         map: webmap,  
+         center: [-79.863949, 43.23747],
+        zoom: 10,
+        container: "viewDiv"
+        });
+
+    });
+  </script>
 	<title>The One True Love</title>
 	
 </head>
@@ -69,40 +95,6 @@
 	</div>
 	
 	<p> Cheers to all the special paws in our lives. </p>
-	
-	</div>
-
-</body>
-</html>
-	<!-- This is a html website for dogs and the places they love best -->
-	
-	<div class = "index">
-	<h1>Where to get Dog Treats?</h1>
-	
-	
-	<div class = "intro">
-	<img id ="img1" src="DogPhotoResize.jpg" alt="Dog Pic" >
-	</div>
-	
-	<div class = "bio">
-	    <h2>Our Message</h2>
-		<p> Hello we are Kelly and Skyler. There are many things that we love: our owners, friends, couches, naps, sunbathing, BUT BUT most importantly TREATS!!!! </p>
-		<p> My god do we love our treats. If you leave us alone we would eat the whole bag and pretend that we didn't! We love dog treats of all varities </p>
-	</div>
-	
-	
-	<h2>Here are some places in Toronto that you can buy dog Treats!</h2>
-	<div id ="map"></div>
-	
-	
-	<h2>If you cant go in person you can even shop online! Here are two popular stores!</h2>
-	<div class = "elink">
-		<a href="https://www.petsmart.ca/">Pet Smart</a>
-		<a href="https://www.petvalu.ca/">Pet Valu</a>
-	</div>
-	
-	<h3> We are not saying that you must use these sources to buy dog treats and send them to us. But we really do like dog treats and we believe we deserve them all!</h3>
-	<p> Here is our PO box: 123 Dog Must Have Treats Rd 567. We eagerly await your treats. </p>
 	
 	</div>
 
